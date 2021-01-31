@@ -1,1 +1,220 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: #222831;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #2d3138;
+}
+
+.nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2d3138;
+}
+
+.nav__logo {
+  margin: auto 0;
+  padding: 0 1.2em;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #eeeeee;
+  z-index: 100;
+}
+
+.nav__logo i {
+  color: #00adb5;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.nav__items {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #2d3138;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.nav__items--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav__item {
+  position: relative;
+  text-decoration: none;
+  color: #eeeeee;
+  font-size: 2rem;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+}
+
+.nav__item::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: #00adb5;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+  content: '';
+}
+
+.nav__item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.burger-btn {
+  margin: 1rem 1rem;
+  padding: 1rem;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+}
+
+.burger-btn__box {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background-color: #eeeeee;
+}
+
+.burger-btn__bars {
+  -webkit-transition: background-color .1s .15s;
+  transition: background-color .1s .15s;
+}
+
+.burger-btn__bars::after {
+  top: 10px;
+  -webkit-transition: -webkit-transform .2s .15s;
+  transition: -webkit-transform .2s .15s;
+  transition: transform .2s .15s;
+  transition: transform .2s .15s, -webkit-transform .2s .15s;
+}
+
+.burger-btn__bars::before {
+  bottom: 10px;
+  -webkit-transition: -webkit-transform .2s .15s;
+  transition: -webkit-transform .2s .15s;
+  transition: transform .2s .15s;
+  transition: transform .2s .15s, -webkit-transform .2s .15s;
+}
+
+.burger-btn--active .burger-btn__bars {
+  background-color: transparent;
+}
+
+.burger-btn--active .burger-btn__bars::after {
+  -webkit-transform: translateY(-10px) rotate(45deg);
+          transform: translateY(-10px) rotate(45deg);
+}
+
+.burger-btn--active .burger-btn__bars::before {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+          transform: translateY(10px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .nav__logo {
+    font-size: 2.4rem;
+  }
+  .nav__items {
+    position: unset;
+    width: auto;
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav__item {
+    font-size: 1.6rem;
+    padding: 0.5em 1em;
+    margin: 1em 1em;
+  }
+  .burger-btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
