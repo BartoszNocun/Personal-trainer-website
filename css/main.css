@@ -1,7 +1,47 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
+}
+
+.section-padding {
+  padding: 4em 2em;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #eeeeee;
+}
+
+.section-heading::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  bottom: -.5em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #00adb5;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 6em 2em;
+  }
+  .section-heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 2.8rem;
+  }
 }
 
 @-webkit-keyframes bounce {
@@ -95,6 +135,8 @@ nav {
   position: fixed;
   width: 100%;
   background-color: #2d3138;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
   z-index: 100;
 }
 
@@ -271,7 +313,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem 1rem;
 }
 
 .header__first-half {
@@ -300,7 +341,7 @@ nav {
 
 .header__call {
   margin: 0 auto;
-  padding: 1em 0 1.5em;
+  padding: 1em 0 3em;
 }
 
 .header__call i {
@@ -326,12 +367,81 @@ nav {
 }
 
 .header__img {
-  width: 90%;
+  max-width: 80%;
+}
+
+.metamorphosis {
+  background-color: #2d3138;
+}
+
+.metamorphosis__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.metamorphosis__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0 5rem;
+}
+
+.metamorphosis__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.metamorphosis__img {
+  max-width: 100%;
+}
+
+.metamorphosis__title {
+  margin: 2em 0 1em;
+  font-size: 2rem;
+  text-align: center;
+  color: #eeeeee;
+}
+
+.metamorphosis__text {
+  text-align: center;
+  color: #eeeeeed2;
 }
 
 @media (min-width: 576px) {
-  .header__img {
-    width: 60%;
+  .metamorphosis__card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .metamorphosis__title {
+    font-size: 2.2rem;
+  }
+  .metamorphosis__text {
+    padding: 0 2rem;
+  }
+  .metamorphosis__img {
+    max-width: 50%;
   }
 }
 
@@ -368,7 +478,6 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 4rem 1rem;
   }
   .header__first-half {
     -webkit-box-pack: center;
@@ -388,7 +497,13 @@ nav {
     font-size: 3.5rem;
   }
   .header__img {
-    width: 90%;
+    max-width: 100%;
+  }
+  .metamorphosis__title {
+    font-size: 2.4rem;
+  }
+  .metamorphosis__text {
+    font-size: 1.8rem;
   }
 }
 
@@ -402,12 +517,30 @@ nav {
   .header__call i {
     font-size: 4rem;
   }
+  .metamorphosis__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .metamorphosis__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .metamorphosis__text {
+    padding: 0 5rem;
+  }
+  .metamorphosis__img {
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 1200px) {
-  .header {
-    padding: 6rem 1rem;
-  }
   .header__title {
     font-size: 3.4rem;
   }
