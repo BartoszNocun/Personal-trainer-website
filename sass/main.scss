@@ -222,29 +222,9 @@ nav {
 
 @media (min-width: 576px) { 
     .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 4rem 1rem;
 
-        &__first-half {
-            justify-content: center;
-            padding: 0 2rem;
-        }
-
-        &__title {
-            text-align: left;
-            font-size: 2.6rem;
-        }
-    
-        &__text {
-            text-align: left;
-            font-size: 1.8rem;
-        }
-
-        &__call {
-            i {
-                font-size: 3.5rem;
-            }
+        &__img {
+            width: 60%;
         }
     }
 }
@@ -273,6 +253,37 @@ nav {
 
     .burger-btn {
         display: none;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 1rem;
+
+        &__first-half {
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        &__title {
+            text-align: left;
+            font-size: 2.6rem;
+        }
+    
+        &__text {
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        &__call {
+            i {
+                font-size: 3.5rem;
+            }
+        }
+
+        &__img {
+            width: 90%;
+        }
     }
 }
 
@@ -312,9 +323,6 @@ nav {
             }
         }
 
-        &__img {
-            min-width: 360px;
-        }
     }
 
 }
