@@ -1,6 +1,7 @@
 @import './colors';
 @import './components';
 @import './mixins';
+@import './animations';
 
 *,
 *::after,
@@ -21,25 +22,32 @@ body {
     background-color: $main-color;
 }
 
+.spacer {
+    width: 100%;
+    height: 70px;
+}
+
+//NAVIGATION
 nav {
     position: fixed;
     width: 100%;
     background-color: $secondary-color;
+    z-index: 100;
 
 }
 
-//NAVIGATION
 .nav {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: $secondary-color;
+    height: 70px;
 
 
     &__logo {
         margin: auto 0;
-        padding: 0 1.2em;
+        padding: 0 1em;
         font-size: 2rem;
         text-decoration: none;
         color: $text-color;
@@ -141,29 +149,107 @@ nav {
         &::before {
             bottom: 10px;
             transition: transform .2s .15s;
-        }    
+        }
     }
 
     &--active {
         .burger-btn__bars {
             background-color: transparent;
         }
-        
+
         .burger-btn__bars::after {
             transform: translateY(-10px) rotate(45deg);
         }
-        
+
         .burger-btn__bars::before {
             transform: translateY(10px) rotate(-45deg);
         }
     }
-
-
 }
 
+// HEADER
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+
+    &__first-half {
+        display: flex;
+        flex-direction: column;
+        color: $text-color;
+        // max-width: 700px;
+    }
+
+    &__title {
+        padding: 1em 0;
+        font-size: 2.4rem;
+        text-align: center;
+        color: $pure-white;
+    }
+
+    &__text {
+        padding: .5em 0 2.5em;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__call {
+        margin: 0 auto;
+        padding: 1em 0 1.5em;
+        i {
+            font-size: 3rem;
+            width: 2em;
+            height: 2em;
+            text-align: center;
+            line-height: 2em;
+            color: $turquoise-color;
+            background-color: $pure-white;
+            border-radius: 50%;
+            animation: bounce 2s 1s linear infinite;
+        }
+    }
+
+    &__second-half {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 90%;
+    }
+}
+
+@media (min-width: 576px) { 
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 1rem;
+
+        &__first-half {
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        &__title {
+            text-align: left;
+            font-size: 2.6rem;
+        }
+    
+        &__text {
+            text-align: left;
+            font-size: 1.8rem;
+        }
+
+        &__call {
+            i {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
-
     .nav {
         &__logo {
             font-size: 2.4rem;
@@ -188,4 +274,47 @@ nav {
     .burger-btn {
         display: none;
     }
+}
+
+@media (min-width: 992px) {
+    .header {
+        &__title {
+            font-size: 3rem;
+        }
+    
+        &__text {
+            font-size: 2.2rem;
+        }
+
+        &__call {
+            i {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) { 
+    .header {
+        padding: 6rem 1rem;
+
+        &__title {
+            font-size: 3.4rem;
+        }
+    
+        &__text {
+            font-size: 2.4rem;
+        }
+
+        &__call {
+            i {
+                font-size: 4rem;
+            }
+        }
+
+        &__img {
+            min-width: 360px;
+        }
+    }
+
 }
