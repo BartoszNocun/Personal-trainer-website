@@ -341,7 +341,6 @@ nav {
 
 .header__call {
   margin: 0 auto;
-  padding: 1em 0 3em;
 }
 
 .header__call i {
@@ -353,6 +352,8 @@ nav {
   color: #00adb5;
   background-color: #ffffff;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(51, 143, 134, 0.404), 0 0 30px rgba(51, 143, 134, 0.404);
+          box-shadow: 0 0 10px rgba(51, 143, 134, 0.404), 0 0 30px rgba(51, 143, 134, 0.404);
   -webkit-animation: bounce 2s 1s linear infinite;
           animation: bounce 2s 1s linear infinite;
 }
@@ -422,6 +423,16 @@ nav {
 .metamorphosis__text {
   text-align: center;
   color: #eeeeeed2;
+}
+
+.about__text {
+  color: #eeeeee;
+  padding-bottom: 1.5em;
+  line-height: 1.2em;
+}
+
+.about__highlight {
+  color: #00adb5;
 }
 
 @media (min-width: 576px) {
@@ -505,6 +516,9 @@ nav {
   .metamorphosis__text {
     font-size: 1.8rem;
   }
+  .about__text {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -549,6 +563,9 @@ nav {
   }
   .header__call i {
     font-size: 4rem;
+  }
+  .about__text {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

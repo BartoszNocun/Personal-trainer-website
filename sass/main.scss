@@ -195,7 +195,7 @@ nav {
 
     &__call {
         margin: 0 auto;
-        padding: 1em 0 3em;
+
         i {
             font-size: 3rem;
             width: 2em;
@@ -205,6 +205,8 @@ nav {
             color: $turquoise-color;
             background-color: $pure-white;
             border-radius: 50%;
+            box-shadow: 0 0 10px rgba(51, 143, 134, 0.404),
+                0 0 30px rgba(51, 143, 134, 0.404);
             animation: bounce 2s 1s linear infinite;
         }
     }
@@ -223,6 +225,7 @@ nav {
 // METAMORPHOSIS
 .metamorphosis {
     background-color: $secondary-color;
+
     &__cards {
         display: flex;
         flex-direction: column;
@@ -250,14 +253,27 @@ nav {
         text-align: center;
         color: $text-color;
     }
-    
+
     &__text {
         text-align: center;
         color: $gray-text-color;
     }
 }
 
-@media (min-width: 576px) { 
+// ABOUT
+.about {
+    &__text {
+        color: $text-color;
+        padding-bottom: 1.5em;
+        line-height: 1.2em;
+    }
+
+    &__highlight {
+        color: $turquoise-color;
+    }
+}
+
+@media (min-width: 576px) {
 
     .metamorphosis {
         &__card {
@@ -268,7 +284,7 @@ nav {
         &__title {
             font-size: 2.2rem;
         }
-        
+
         &__text {
             padding: 0 2rem;
         }
@@ -318,7 +334,7 @@ nav {
             text-align: left;
             font-size: 2.6rem;
         }
-    
+
         &__text {
             text-align: left;
             font-size: 1.8rem;
@@ -335,12 +351,18 @@ nav {
         }
     }
 
-    .metamorphosis { 
+    .metamorphosis {
 
         &__title {
             font-size: 2.4rem;
         }
 
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+
+    .about {
         &__text {
             font-size: 1.8rem;
         }
@@ -352,7 +374,7 @@ nav {
         &__title {
             font-size: 3rem;
         }
-    
+
         &__text {
             font-size: 2.2rem;
         }
@@ -373,7 +395,7 @@ nav {
             flex-direction: column;
             align-items: center;
         }
-        
+
         &__text {
             padding: 0 5rem;
         }
@@ -384,12 +406,12 @@ nav {
     }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .header {
         &__title {
             font-size: 3.4rem;
         }
-    
+
         &__text {
             font-size: 2.4rem;
         }
@@ -398,6 +420,12 @@ nav {
             i {
                 font-size: 4rem;
             }
+        }
+    }
+
+    .about {
+        &__text {
+            font-size: 2rem;
         }
     }
 
