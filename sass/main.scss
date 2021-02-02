@@ -217,6 +217,7 @@ nav {
     }
 
     &__img {
+        margin-top: 4rem;
         max-width: 80%;
     }
 }
@@ -258,6 +259,33 @@ nav {
         text-align: center;
         color: $gray-text-color;
     }
+
+    &__more {
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            margin-top: .5em;
+            text-align: center;
+            color: $pure-white
+        }
+
+        &-icon {
+            font-size: 3.5rem;
+            margin-top: .4em;
+            padding: 0 .2em;
+            align-self: center;
+            color: $text-color;
+            cursor: pointer;
+            transition: color .4s;
+
+            &:hover {
+                color: $turquoise-color;
+            }
+        }
+    }
+
+
 }
 
 // ABOUT
@@ -291,6 +319,17 @@ nav {
 
         &__img {
             max-width: 50%;
+        }
+
+        &__more {
+    
+            &-text {
+                font-size: 1.8rem;
+            }
+    
+            &-icon {
+                font-size: 3.8rem;
+            }
         }
     }
 }
@@ -348,6 +387,7 @@ nav {
 
         &__img {
             max-width: 100%;
+            margin-top: unset;
         }
     }
 
@@ -403,6 +443,17 @@ nav {
         &__img {
             max-width: 70%;
         }
+
+        &__more {
+    
+            &-text {
+                font-size: 2rem;
+            }
+    
+            &-icon {
+                font-size: 4rem;
+            }
+        }
     }
 }
 
@@ -426,6 +477,19 @@ nav {
     .about {
         &__text {
             font-size: 2rem;
+        }
+    }
+
+    .metamorphosis {
+        &__more {
+    
+            &-text {
+                font-size: 2.2rem;
+            }
+    
+            &-icon {
+                font-size: 4.2rem;
+            }
         }
     }
 
