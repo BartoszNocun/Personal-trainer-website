@@ -469,6 +469,73 @@ nav {
   color: #00adb5;
 }
 
+.about__opinons {
+  margin: 1.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eeeeee;
+}
+
+.swiper-container {
+  height: 28rem;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  background-color: #eeeeee;
+  overflow: auto;
+}
+
+.swiper-slide__first-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.swiper-slide__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-slide__person-name {
+  padding: 0 1em;
+  color: black;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.swiper-slide__person-img {
+  width: 6rem;
+}
+
+.swiper-slide__icon {
+  color: #00adb5;
+}
+
+.swiper-slide__text {
+  font-size: 1.4rem;
+  margin-top: 2em;
+  color: #222831;
+}
+
+@media (min-width: 360px) {
+  .swiper-container {
+    height: 24rem;
+  }
+}
+
 @media (min-width: 576px) {
   .metamorphosis__card {
     -webkit-box-orient: horizontal;
@@ -493,6 +560,22 @@ nav {
   }
   .metamorphosis__more-icon {
     font-size: 3.8rem;
+  }
+  .swiper-container {
+    height: 26rem;
+  }
+  .swiper-slide__person-name {
+    font-size: 1.8rem;
+    padding: 0 1em;
+  }
+  .swiper-slide__person-img {
+    width: 7rem;
+  }
+  .swiper-slide__icon {
+    font-size: 2.4rem;
+  }
+  .swiper-slide__text {
+    font-size: 1.6rem;
   }
 }
 
@@ -560,6 +643,9 @@ nav {
   .about__text {
     font-size: 1.8rem;
   }
+  .about__opinons {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -599,6 +685,23 @@ nav {
   .metamorphosis__more-icon {
     font-size: 4rem;
   }
+  .swiper-container {
+    height: 28rem;
+  }
+  .swiper-slide__person-name {
+    font-size: 2rem;
+    padding: 0 1em;
+  }
+  .swiper-slide__person-img {
+    width: 8rem;
+  }
+  .swiper-slide__icon {
+    font-size: 2.6rem;
+  }
+  __text {
+    margin-top: 1.5em;
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -613,6 +716,9 @@ nav {
   }
   .about__text {
     font-size: 2rem;
+  }
+  .about__opinons {
+    font-size: 2.2rem;
   }
   .metamorphosis__more-text {
     font-size: 2.2rem;
