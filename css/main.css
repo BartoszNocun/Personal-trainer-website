@@ -11,6 +11,7 @@
 .section-heading {
   position: relative;
   margin-bottom: 2em;
+  margin-top: 1.5rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -39,6 +40,7 @@
   }
   .section-heading {
     font-size: 2.6rem;
+    margin-top: 0;
   }
 }
 
@@ -132,7 +134,7 @@ body {
 
 .spacer {
   width: 100%;
-  height: 70px;
+  height: 7rem;
 }
 
 nav {
@@ -155,7 +157,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #2d3138;
-  height: 70px;
+  height: 7rem;
 }
 
 .nav__logo {
@@ -625,6 +627,17 @@ nav {
 .contact__social a i {
   font-size: 3rem;
   padding: .4em;
+}
+
+.footer {
+  height: 5rem;
+  border-top: 1px solid #eeeeeed2;
+}
+
+.footer__text {
+  line-height: 5rem;
+  text-align: center;
+  color: #eeeeeed2;
 }
 
 @media (min-width: 360px) {
