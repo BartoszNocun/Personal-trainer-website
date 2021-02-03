@@ -387,6 +387,55 @@ nav {
     }
 }
 
+// CONTACT
+.contact {
+
+    &__contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1em;
+    }
+
+    &__text {
+        color: $text-color;
+        margin-bottom: .5em;
+
+        a {
+            text-decoration: none;
+            color: $turquoise-color;
+            transition: color .3s;
+
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+
+
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color .4s;
+
+            &:hover {
+                color: $turquoise-color;
+            }
+
+            i {
+                font-size: 3rem;
+                padding: .4em;
+            }
+
+        }
+    }
+}
+
 @media (min-width: 360px) {
     .swiper-container {
         height: 24rem;
@@ -461,23 +510,40 @@ nav {
     .price-list {
         &__card {
             width: 70%;
+
             &-title {
                 font-size: 2.8rem;
             }
-    
+
             &-subtitle {
                 font-size: 2rem;
                 color: $gray-text-color;
             }
-    
+
             &-price {
                 font-size: 2.8rem;
             }
-    
+
             &-description {
                 font-size: 2rem;
             }
-    
+
+        }
+    }
+
+    .contact {
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__social {
+            a {
+                i {
+                    font-size: 4rem;
+                    padding: .4em;
+                }
+
+            }
         }
     }
 }
@@ -559,6 +625,7 @@ nav {
         &__cards {
             justify-content: space-between;
         }
+
         &__card {
             margin: 0;
             max-width: 31%;
