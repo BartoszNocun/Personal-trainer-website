@@ -29,6 +29,10 @@
   background-color: #00adb5;
 }
 
+.highlight {
+  color: #00adb5;
+}
+
 @media (min-width: 768px) {
   .section-padding {
     padding: 6em 2em;
@@ -465,10 +469,6 @@ nav {
   line-height: 1.2em;
 }
 
-.about__highlight {
-  color: #00adb5;
-}
-
 .about__opinons {
   margin: 1.5em 0;
   text-align: center;
@@ -530,9 +530,53 @@ nav {
   color: #222831;
 }
 
+.price-list {
+  background-color: #2d3138;
+}
+
+.price-list__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.price-list__card {
+  margin: 2rem auto;
+  padding: 1em;
+  width: 100%;
+  color: #eeeeee;
+  text-align: center;
+  border: 2px solid #eeeeeed2;
+}
+
+.price-list__card-title {
+  font-size: 2.6rem;
+}
+
+.price-list__card-subtitle {
+  font-size: 1.8rem;
+  color: #eeeeeed2;
+}
+
+.price-list__card-price {
+  margin: .5em 0;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.price-list__card-description {
+  font-size: 1.8rem;
+}
+
 @media (min-width: 360px) {
   .swiper-container {
     height: 24rem;
+  }
+  .price-list__card {
+    border: 3px solid #eeeeeed2;
   }
 }
 
@@ -577,6 +621,22 @@ nav {
   .swiper-slide__text {
     font-size: 1.6rem;
   }
+  .price-list__card {
+    width: 70%;
+  }
+  .price-list__card-title {
+    font-size: 2.8rem;
+  }
+  .price-list__card-subtitle {
+    font-size: 2rem;
+    color: #eeeeeed2;
+  }
+  .price-list__card-price {
+    font-size: 2.8rem;
+  }
+  .price-list__card-description {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -613,12 +673,6 @@ nav {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .header__first-half {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 2rem;
-  }
   .header__title {
     text-align: left;
     font-size: 2.6rem;
@@ -645,6 +699,15 @@ nav {
   }
   .about__opinons {
     font-size: 2rem;
+  }
+  .price-list__cards {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .price-list__card {
+    margin: 0;
+    max-width: 31%;
   }
 }
 
@@ -701,6 +764,9 @@ nav {
   __text {
     margin-top: 1.5em;
     font-size: 1.8rem;
+  }
+  .price-list__card {
+    max-width: 32%;
   }
 }
 
